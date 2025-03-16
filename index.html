@@ -8,14 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Qual è la tua risposta?</h1>
-        <form id="questionForm">
-            <input type="text" id="answer" placeholder="Scrivi qui la tua risposta..." required>
-            <button type="submit">Invia</button>
-        </form>
-        <div class="loader hidden"></div>
+        <h1>Vuoi procedere?</h1>
+        <div class="buttons">
+            <button onclick="redirectToLoading()">Sì</button>
+            <button onclick="redirectToLoading()">No</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function redirectToLoading() {
+            window.location.href = "loading.html";
+        }
+    </script>
 </body>
 </html>
