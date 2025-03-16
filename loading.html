@@ -4,7 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading...</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset e impostazioni generali */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #007bff; /* Sfondo Blu */
+            margin: 0;
+        }
+
+        /* Contenitore per il caricamento */
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Animazione della rotella */
+        .loader {
+            width: 65px;
+            aspect-ratio: 1;
+            position: relative;
+        }
+
+        .loader:before,
+        .loader:after {
+            content: "";
+            position: absolute;
+            border-radius: 50px;
+            box-shadow: 0 0 0 3px inset white; /* Rotella Bianca */
+            animation: l4 2.5s infinite;
+        }
+
+        .loader:after {
+            animation-delay: -1.25s;
+        }
+
+        /* Definizione dell'animazione */
+        @keyframes l4 {
+            0% { inset: 0 35px 35px 0; }
+            12.5% { inset: 0 35px 0 0; }
+            25% { inset: 35px 35px 0 0; }
+            37.5% { inset: 35px 0 0 0; }
+            50% { inset: 35px 0 0 35px; }
+            62.5% { inset: 0 0 0 35px; }
+            75% { inset: 0 0 35px 35px; }
+            87.5% { inset: 0 0 35px 0; }
+            100% { inset: 0 35px 35px 0; }
+        }
+    </style>
 </head>
 <body>
     <div class="loading-container">
