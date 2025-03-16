@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domanda e Caricamento</title>
+    <title>Are u sure?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Vuoi procedere?</h1>
+        <h1>Are u sure?</h1>
         <div class="buttons">
-            <button onclick="redirectToLoading()">Sì</button>
-            <button onclick="redirectToLoading()">No</button>
+            <button onclick="goToLoading()">Yes</button>
+            <button onclick="goToLoading()">No</button>
         </div>
     </div>
 
     <script>
-        function redirectToLoading() {
-            window.location.href = "loading.html";
+        function goToLoading() {
+            window.location.href = "loading.html"; // Reindirizza alla pagina di caricamento
         }
     </script>
 </body>
