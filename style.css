@@ -16,7 +16,7 @@ body {
     background-color: white;
 }
 
-/* Nuova animazione per il testo "Loading..." */
+/* Effetto di digitazione più veloce */
 .loader {
     font-size: 30px;
     font-weight: bold;
@@ -26,19 +26,32 @@ body {
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid black; /* Effetto cursore */
-    width: 0;
-    animation: typing 2s steps(10, end) infinite, blink-cursor 0.8s step-end infinite;
+    width: 10ch;
+    animation: typing 1s steps(10, end) infinite alternate, blink-cursor 0.5s step-end infinite;
 }
 
-/* Effetto digitazione */
+/* Aggiunta dei tre puntini animati */
+.dots::after {
+    content: "";
+    animation: dots 1s steps(4, end) infinite;
+}
+
+/* Effetto di digitazione più veloce */
 @keyframes typing {
     0% { width: 0; }
-    50% { width: 10ch; } /* Mostra l'intera parola "Loading..." */
-    100% { width: 10ch; }
+    100% { width: 10ch; } /* Mostra tutta la parola */
 }
 
-/* Effetto lampeggio cursore */
+/* Effetto lampeggio cursore più rapido */
 @keyframes blink-cursor {
-    from { border-color: black; }
-    to { border-color: transparent; }
+    50% { border-color: transparent; }
+}
+
+/* Animazione dei tre puntini */
+@keyframes dots {
+    0% { content: ""; }
+    25% { content: "."; }
+    50% { content: ".."; }
+    75% { content: "..."; }
+    100% { content: ""; }
 }
