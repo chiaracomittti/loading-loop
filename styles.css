@@ -6,11 +6,32 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #007bff; /* Sfondo Blu */
+    color: white; /* Testo Bianco */
     margin: 0;
-    color: white;
 }
 
-/* Contenitore centrale */
+/* Contenitore principale */
+.container {
+    text-align: center;
+}
+
+/* Pulsanti trasparenti con bordo bianco */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white; /* Bordo Bianco */
+    background-color: transparent; /* Sfondo Trasparente */
+    color: white; /* Testo Bianco */
+    border-radius: 20px; /* Angoli arrotondati */
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Effetto hover leggero */
+}
+
+/* Contenitore per il caricamento */
 .loading-container {
     display: flex;
     justify-content: center;
@@ -30,7 +51,7 @@ body {
     content: "";
     position: absolute;
     border-radius: 50px;
-    box-shadow: 0 0 0 3px inset #ffffff; /* Colore bianco */
+    box-shadow: 0 0 0 3px inset white; /* Rotella Bianca */
     animation: l4 2.5s infinite;
 }
 
